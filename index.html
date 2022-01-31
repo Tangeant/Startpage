@@ -23,7 +23,7 @@
                 </img>
             </div>
             <div class="bookmark item_a2">
-                <a class="link" href="https://mail.google.com/">
+                <a class="link" href="https://posteo.de/">
                 </a>
                 <img class="link-display-icon" src="src/gm.png">
                 </img>
@@ -41,13 +41,13 @@
                 </img>
             </div>
             <div class="bookmark item_b2">
-                <a class="link" href="">
+                <a class="link" href="https://www1.bmo.com/onlinebanking/cgi-bin/netbnx/NBmain?product=5">
                 </a>
                 <img class="link-display-icon" src="src/sm.png">
                 </img>
             </div>
             <div class="bookmark item_b3">
-                <a class="link" href="">
+                <a class="link" href="https://github.com/">
                 </a>
                 <img class="link-display-icon" src="src/rb.png">
                 </img>
@@ -59,13 +59,13 @@
                 </img>
             </div>
             <div class="bookmark item_c2">
-                <a class="link" href="">
+                <a class="link" href="https://twitter.com">
                 </a>
                 <img class="link-display-icon" src="src/hn.png">
                 </img>
             </div>
             <div class="bookmark item_c3">
-                <a class="link" href="">
+                <a class="link" href="https://washingtonpost.com">
                 </a>
                 <img class="link-display-icon" src="src/bh.png">
                 </img>
@@ -75,8 +75,8 @@
             <div class="cursor cursor2" id="div2">
             </div>
         </div>
-        <form action="https://www.google.com/search?q=" method="get">
-            <input autocomplete="off" autofocus="" class="search_input" name="q" placeholder="Search the Web" type="text">
+        <form action="https://www.duckduckgo.com/?q=%s" method="get">
+            <input autocomplete="on" autofocus="" class="search_input" name="q" placeholder="Search the Web" type="text">
             </input>
         </form>
     </body>
@@ -91,23 +91,23 @@ var y = 0;
 var x_offset = window.innerWidth * (-1/1.45);
 var y_offset = window.innerHeight * (-1/1.35);
 
-document.onmousemove = get_mouse; 
+document.onmousemove = get_mouse;
 
 function offset_calc(e)
-{    
+{
  x_offset = window.innerWidth * (-1/1.45);
- y_offset = window.innerHeight * (-1/1.35);  
+ y_offset = window.innerHeight * (-1/1.35);
 }
 
 window.addEventListener('resize', offset_calc);
 function get_mouse(e)
-{    
+{
   x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft;
   y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop;
   x += x_offset;
   y += y_offset;
-  beam(1);     
-  beam(2);     
+  beam(1);
+  beam(2);
 }
 
 function beam(n)
